@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body ng-app="">
+
+保留 HTML:
+ <!-- <input type="checkbox" ng-model="myVar" ng-checked='true'> -->
+ <input type="checkbox" ng-model="myVar" ng-init="myVar = true">
+
+<div ng-if="myVar">
+<h1>Welcome</h1>
+<p>Welcome to my home.</p>
+<hr>
+</div>
+
+<p>当复选框取消选中时 DIV 元素将移除。</p>
+<p>当重新选中复选框，DIV 元素会重新显示。</p>
+<!-- ng-show -->
+<div ng-show="myVar">
+<p>dispaly属性变成block</p>
+</div>
+<hr>
+<div ng-hide="myVar">
+<p>dispaly属性变成none,但是元素一直存在，不会消失，只是class在ng-hide与显示之间变化</p>
+
+
+</body>
+</html>
